@@ -435,6 +435,13 @@ module Magick
       primitive "opacity #{opacity}"
     end
 
+    # Draw text using the Pango rendering system. This is especially
+    # useful for Arabic, Persian and other joined and right-to-left
+    # languages.
+    def pango(text)
+      primitive "pango '#{text}'"
+    end
+    
     # Draw using SVG-compatible path drawing commands. Note that the
     # primitive requires that the commands be surrounded by quotes or
     # apostrophes. Here we simply use apostrophes.
